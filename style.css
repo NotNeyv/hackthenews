@@ -1,0 +1,39 @@
+.jersey-25-regular {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+body {
+    background-color: rgb(223, 206, 200);
+}
+
+.header {
+    background-color: rgb(216, 89, 89);
+    height: fit-content;
+    width: 100%;
+}
+
+.logo {
+    height: 20px;
+    border: 2px black solid;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: -3px;
+}
+
+.title {
+    font-family: "Jersey 25", sans-serif;
+    display: inline;
+    font-size: 25px;
+    margin-bottom: 2px;
+}
+
+.links {
+    display: inline;
+}
