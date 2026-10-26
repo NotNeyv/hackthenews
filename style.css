@@ -37,3 +37,15 @@ body {
 .links {
     display: inline;
 }
+
+.links:hover {
+    cursor: pointer;
+}
+
+.linksholder {
+    display: inline;
+}
+
+.text {
+    display: inline;
+}
