@@ -4,12 +4,22 @@
   font-style: normal;
 }
 
+.google-sans-flex {
+  font-family: "Google Sans Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "ROND" 0;
+}
 
 
 
 
 body {
-    background-color: rgb(223, 206, 200);
+    background-color: #F6F6EF;
 }
 
 .header {
@@ -48,4 +58,14 @@ body {
 
 .text {
     display: inline;
+    color: blueviolet;
+}
+
+.description {
+    font-family: "Google Sans Flex", sans-serif;
+}
+
+.newestHolder {
+    width: 100%;
+    height: fit-content;
 }

@@ -1,4 +1,5 @@
-
+let displayLength = 30;
+let i = 0;
 
 // fetching the data
 
@@ -18,17 +19,29 @@ async function getNewData() {
   }
 }
 
+function loadMore() {
+  displayLength = displayLength + 30;
+  getNewData();
+}
+
 function displayNewData(data) {
     let len = data.length;
-    for (let i = 0; i < len; i++) {
+
+    for (i; i < displayLength; i++) {
         let record = data[i];
         displayDiv = document.getElementById("newestHolder");
 
         //name
         const devName = record.github_username;
+        const description = record.description;
         const heading = document.createElement("h3");
-        heading.innerHTML = i.toString() + ". " + devName;
-        displayDiv.appendChild(heading);
-    }
+        const itemDiv = document.createElement("div");
+        heading.className = "description"
+        let numb = i + 1;
 
+        heading.innerHTML = numb.toString() + ". " + description;
+
+        itemDiv.appendChild(heading);
+        displayDiv.appendChild(itemDiv);
+    }
 }
