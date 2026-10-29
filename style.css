@@ -69,3 +69,14 @@ body {
     width: 100%;
     height: fit-content;
 }
+
+
+.description {
+    font-weight: 100;
+}
+
+.subText {
+    display: inline;
+    font-size: 10px;
+    color: #828282;
+}

@@ -29,19 +29,40 @@ function displayNewData(data) {
 
     for (i; i < displayLength; i++) {
         let record = data[i];
-        displayDiv = document.getElementById("newestHolder");
+        let displayDiv = document.getElementById("newestHolder");
 
-        //name
-        const devName = record.github_username;
+        //data
         const description = record.description;
-        const heading = document.createElement("h3");
-        const itemDiv = document.createElement("div");
-        heading.className = "description"
+        const code = record.code_url;
+        const hours = record.hours;
+        const ysws = record.ysws;
+        let name = record.github_username
+
         let numb = i + 1;
 
-        heading.innerHTML = numb.toString() + ". " + description;
+        const itemDiv = document.createElement("tr");
+        itemDiv.className = "itemDiv";
 
+        //the rank
+        const number = document.createElement("td");
+        const rank = document.createElement("span");
+        rank.innerHTML = numb + ".";
+        number.appendChild(rank)
+
+
+        const titleLine = document.createElement("span")
+        const heading = document.createElement("a");
+        heading.className = "description";
+
+
+        //sub-text
+        const subText = document.createElement("td");
+        subText.className = "subText";
+        subText.innerText = "By " + name + " | " + "For " + ysws + " | " + "Took: " + hours + "hrs";
+
+        itemDiv.appendChild(number);
         itemDiv.appendChild(heading);
+        itemDiv.appendChild(subText);
         displayDiv.appendChild(itemDiv);
     }
 }
