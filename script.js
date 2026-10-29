@@ -36,10 +36,11 @@ function displayNewData(data) {
         const code = record.code_url;
         const hours = record.hours;
         const ysws = record.ysws;
-        let name = record.github_username
+        let name = record.github_username;
 
         let numb = i + 1;
 
+        //box for the text
         const itemDiv = document.createElement("tr");
         itemDiv.className = "itemDiv";
 
@@ -53,16 +54,23 @@ function displayNewData(data) {
         const titleLine = document.createElement("span")
         const heading = document.createElement("a");
         heading.className = "description";
+        heading.innerHTML = description
+        titleLine.appendChild(heading)
 
 
         //sub-text
+        const subBox = document.createElement("tr")
+        const space = document.createElement("td");
+        space.colSpan = 2;
         const subText = document.createElement("td");
         subText.className = "subText";
         subText.innerText = "By " + name + " | " + "For " + ysws + " | " + "Took: " + hours + "hrs";
+        subBox.appendChild(space);
+        subBox.appendChild(subText);
 
         itemDiv.appendChild(number);
-        itemDiv.appendChild(heading);
-        itemDiv.appendChild(subText);
+        itemDiv.appendChild(titleLine);
+        itemDiv.appendChild(subBox);
         displayDiv.appendChild(itemDiv);
     }
 }
