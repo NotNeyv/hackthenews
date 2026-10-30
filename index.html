@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,11 +18,12 @@
         <div class="logoHolder">
             <img class="logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.hackclub.com%2Ficon-square.png&f=1&nofb=1&ipt=61062edeec7abe0d823ad70e7e2c7f6731dd780c2398e8bd09e623e447a10eb0&ipo=images">
             <p class="title"><strong>Hack club news</strong></p>
-            <p class="linksholder"><p class="links" onclick="getNewData(displayLength)">welcome</p> | <p class="links" onclick="idk()">recomended</p> | <p class="links" onclick="idk()">random</p> | <p class="links" onclick="idk()">top stared</p></p>
+            <p class="linksholder"><a class="links" href="welcome.html">welcome</a> | <a class="links" href="recomended.html">recomended</a> | <a class="links" href="index.html">random</a> | <a class="links" href="mostStars.html">top stared</a></p>
         </div>
     </header>
+    <h1 style="font-size: 15px; margin-left: auto; margin-right: auto; font-family: Geneva, Verdana, sans-serif; font-weight: 200;">Random order based on generateed ip, updates every 5 min.</h1>
     <table id="newestHolder" class="newestHolder"></table>
-    <a class="links" onclick="loadMore()">load more</a>
+    <a class="loadMore" id="loadMoreBtn" onclick="loadMore()">load more</a>
 </body>
 </html>
 <script src="script.js"></script>

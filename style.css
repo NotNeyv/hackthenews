@@ -46,6 +46,8 @@ body {
 
 .links {
     display: inline;
+    color: inherit;
+    text-decoration: none;
 }
 
 .links:hover {
@@ -72,11 +74,18 @@ body {
 
 
 .description {
-    font-weight: 100;
+    font-weight: 400;
+    font-size: 10pt;
+    text-decoration: none;
+    color: inherit;
 }
 
 .subText {
     display: inline;
     font-size: 10px;
     color: #828282;
+}
+
+.loadMore {
+    display: none;
 }

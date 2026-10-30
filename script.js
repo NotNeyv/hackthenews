@@ -1,8 +1,9 @@
 let displayLength = 30;
 let i = 0;
+let displayLoadMore = false;
+const loadMoreBtn = document.getElementById("loadMoreBtn")
 
 // fetching the data
-
 async function getNewData() {
   const url = "https://ships.hackclub.com/api/v1/ysws_entries";
   try {
@@ -26,7 +27,7 @@ function loadMore() {
 
 function displayNewData(data) {
     let len = data.length;
-
+    loadMoreBtn.style.display = "block";
     for (i; i < displayLength; i++) {
         let record = data[i];
         let displayDiv = document.getElementById("newestHolder");
@@ -38,6 +39,10 @@ function displayNewData(data) {
         const ysws = record.ysws;
         let name = record.github_username;
 
+        if (name == "null") {
+          name = "Anonymous"
+        }
+
         let numb = i + 1;
 
         //box for the text
@@ -47,6 +52,8 @@ function displayNewData(data) {
         //the rank
         const number = document.createElement("td");
         const rank = document.createElement("span");
+        number.align = "right"
+        number.vAlign = "top"
         rank.innerHTML = numb + ".";
         number.appendChild(rank)
 
@@ -54,23 +61,33 @@ function displayNewData(data) {
         const titleLine = document.createElement("span")
         const heading = document.createElement("a");
         heading.className = "description";
-        heading.innerHTML = description
-        titleLine.appendChild(heading)
+        heading.innerHTML = description;
+        heading.href = code;
+        titleLine.appendChild(heading);
 
 
         //sub-text
         const subBox = document.createElement("tr")
         const space = document.createElement("td");
         space.colSpan = 2;
+        subBox.appendChild(space);
+
         const subText = document.createElement("td");
         subText.className = "subText";
         subText.innerText = "By " + name + " | " + "For " + ysws + " | " + "Took: " + hours + "hrs";
-        subBox.appendChild(space);
         subBox.appendChild(subText);
 
+        const spacing = document.createElement("tr");
+        spacing.style.height = "10px"
+
+        
         itemDiv.appendChild(number);
         itemDiv.appendChild(titleLine);
         itemDiv.appendChild(subBox);
+        itemDiv.appendChild(spacing);
         displayDiv.appendChild(itemDiv);
     }
 }
+
+//main code
+getNewData(displayLength)
