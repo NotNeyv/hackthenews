@@ -89,3 +89,13 @@ body {
 .loadMore {
     display: none;
 }
+
+.loadMore:hover {
+    cursor: pointer;
+}
+
+.center {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
