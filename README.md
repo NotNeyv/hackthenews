@@ -2,13 +2,14 @@
 <h4 align="center">A news site for HC inspired by ([hackernews](https://news.ycombinator.com/))</h4>
 <h3 align="center">-----------------</h3>
 
-[(the screenshot doesn't seem to load for you...)](image.png)
+<img href="image.png">
 
-<h3>The only way to run this as a demo is through the use of VScode debug consel, sorry if this causes incovinience but all the platforms which allow such massive api calls are paid. Here is how:</h3>
+<h3>The only way to run this as a demo is through the use of VScode debug consol, sorry if this causes inconvenience but all the platforms which allow such massive api calls are paid. Here is how:</h3>
 <p>1. clone the repo using:</p>
-```git clone https://github.com/NotNeyv/hackthenews```
-<p>2. open the file in VS code</p>
-<p>3. Navigate to the debug consel and click on the run button.</p>
+``` cd (where you want to save the files) ```
+``` git clone https://github.com/NotNeyv/hackthenews ```
+<p>2. open the folder in VS code</p>
+<p>3. Navigate to the debug consol and click on the run button.</p>
 
 <h3>Features</h3>
 <p>-a welcoming html file, just like the original hackernews</p>
