@@ -6,8 +6,8 @@
 
 <h3>The only way to run this as a demo is through the use of VScode debug consol, sorry if this causes inconvenience but all the platforms which allow such massive api calls are paid. Here is how:</h3>
 <p>1. clone the repo using:</p>
-``` cd (where you want to save the files) ```
-``` git clone https://github.com/NotNeyv/hackthenews ```
+"cd (where you want to save the files)" and then:
+"git clone https://github.com/NotNeyv/hackthenews"
 <p>2. open the folder in VS code</p>
 <p>3. Navigate to the debug consol and click on the run button.</p>
 
