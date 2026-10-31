@@ -2,7 +2,7 @@
 <h4 align="center">A news site for HC inspired by ([hackernews](https://news.ycombinator.com/))</h4>
 <h3 align="center">-----------------</h3>
 
-<img href="image.png">
+<img src="image.png" alt="Hack club newws!!">
 
 <h3>The only way to run this as a demo is through the use of VScode debug consol, sorry if this causes inconvenience but all the platforms which allow such massive api calls are paid. Here is how:</h3>
 <p>1. clone the repo using:</p>
